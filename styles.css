@@ -13,11 +13,14 @@ body{
  }
 #navbar{
   position: relative;
-  background: #f4f4f4;
-  height: 100px !important;
+  background: #fff;	
 }
 .navbar-header a img{
-  padding:30px;
+  padding-top:10px;
+  padding-left: 10px;
+  height: 50px;
+  width: 60px;
+  display: none;	
 }
 .navbar-default .navbar-nav>li>a {
     color: #707070 !important;
@@ -27,17 +30,16 @@ body{
 }
 .navbar {
     position: relative;
-	height: 100px !important;
+	height: 100px;
     min-height: 50px;
     margin-bottom: 0px !important; 
 	border: 0px !important;
 }
 #navbar .nav li{
-	margin-right:10px;
-	padding: 27px 0px;
-}
+	padding-top: 27px;
+	}
 #navbar .nav li:first-child{	
-	padding: 20px 0px;
+	padding: 20px 20px;
 }
 #navbar .nav li a:hover{
 	opacity: .8;
@@ -45,14 +47,14 @@ body{
 }
 
 .navbar-default {
-    background-color: #fff !important;
-    border-color: #fff !important;
+    background-color: #fff;
+    border-color: #f4f4f4 !important;
 }
 .navbar-toggle {
-    margin-top: 35px !important;
+    margin-top: 16px !important;
     border: none !important;
 }
-/* Carousel*/
+/* Carousel
 .carousel{
 	margin-top: 100px;
 }
@@ -61,7 +63,6 @@ body{
 }
 .carousel-inner item{
     width: 100%;
-	height: 750px;
 }
 .carousel-control {
     width: 0;
@@ -109,7 +110,7 @@ body{
 .carousel-control.right span:hover {
 	opacity: .7;
 	filter: alpha(opacity=70);
-}
+}*/
 /*
 .nav{
 	background: #fff;
@@ -168,21 +169,28 @@ body{
 .main-body{
 	margin: 0 auto;
 }
-.clear{
-	clear: both;
-}
-
+.main-body .background-carousel{		
+	width:100%;	
+	height: 100vh;
+	max-height:750px;
+	background-image: url("./images/main1.png");
+	background-repeat:no-repeat;
+	background-position: center;
+	background-size: cover;
+} 
 .main-body img{
 	width: 100%;
 	height: 750px;
 }
 .main-body .text-block{
 	width: 70%;
+	z-index: 1;
 	padding: 94px 0px;
 	font-size: 22px;
 	line-height: 1.5;
 	text-align: center;
 	margin: auto;
+	display: block;
 	}
 
 .main-body .floating{
@@ -260,10 +268,18 @@ ol, ul {
 	padding-left: 0px !important;
 }
 @media only screen and (max-width: 768px) {
-#navbar .nav li{
-	margin-right:0px !important;
-	padding: 0px 0px;
+.navbar { 
+	height: 60px;
+}
+.navbar-header a img{
+  display: inline;
+}
+#navbar .nav li, a{
+	padding: 5px 5px;
 	background: #fff;
+}
+#navbar .nav li:first-child{	
+	display: none;
 }
 .main-body .floating {
     padding: 30px 0px;
@@ -275,7 +291,7 @@ ol, ul {
     width: 90%;
     padding: 30px 0px;
     font-size: 1em;
-    }
+}
 .footer {
     position: relative;
     display: block;
@@ -286,5 +302,11 @@ ol, ul {
 	position: inherit !important;
     right: 0px !important;
     text-align: center;
+}
+.navbar-default .navbar-nav>li>a {
+ padding: 5px !important;
+}
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background-color: #fff !important;
 }
 }
