@@ -13,7 +13,8 @@ body{
  }
 #navbar{
   position: relative;
-  background: #fff;	
+  background: #fff;
+  border-bottom: 1px solid #eee;
 }
 .navbar-header a img{
   padding-top:10px;
@@ -29,8 +30,7 @@ body{
     border: none !important;    
 }
 .navbar {
-    position: relative;
-	height: 100px;
+    position: relative;	
     min-height: 50px;
     margin-bottom: 0px !important; 
 	border: 0px !important;
@@ -38,26 +38,53 @@ body{
 #navbar .nav li{
 	padding-top: 27px;
 	}
+#navbar .nav li a{
+	padding-right: 8px;
+	}
 #navbar .nav li:first-child{	
-	padding: 20px 20px;
+	padding: 20px 30px;
+	margin-left: 50px;
 }
 #navbar .nav li a:hover{
 	opacity: .8;
 	color:#000;
 }
-
 .navbar-default {
-    background-color: #fff;
-    border-color: #f4f4f4 !important;
+    background-color: #fff !important;
+    border-color: #f4f4f4;
 }
 .navbar-toggle {
     margin-top: 16px !important;
     border: none !important;
 }
-/* Carousel
-.carousel{
-	margin-top: 100px;
+.carousel-control {
+	opacity: 1 !important;
+	overflow: hidden !important;
 }
+.glyphicon-chevron-right{
+	right: 6% !important;
+	background-color: #000
+}
+.glyphicon-chevron-left{
+	left: 6%  !important;
+	background-color: #000
+}
+.inner-img{
+	width:100%;	
+	height: calc(100vh - 109px);
+	background-repeat:no-repeat;
+	background-position: center;
+	background-size: cover;	
+}
+.carousel{
+	margin-top: 109px;
+}
+.carousel-control .glyphicon-chevron-right, .glyphicon-chevron-left, .carousel-control .icon-next, .carousel-control .icon-prev {
+    width: 40px !important;
+    height: 37px !important;
+    font-size: 35px !important;  
+}
+/* Carousel
 .carousel-indicators .active {
     background-color: #2980b9;
 }
@@ -102,15 +129,15 @@ body{
 .carousel-inner>.item>a>img, .carousel-inner>.item>img {
     line-height: 1;
 }
-.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
-    display: block;
-    max-width: 100%;
-}
+.carousel-inner>.item>a>img, .carousel-inner>.item>img, .thumbnail a>img, .thumbnail>img {
+	height: 100vh !important;
+	max-height: 760px !important; 
+	}
 .carousel-control.left span:hover,
 .carousel-control.right span:hover {
 	opacity: .7;
 	filter: alpha(opacity=70);
-}*/
+} */
 /*
 .nav{
 	background: #fff;
@@ -192,11 +219,9 @@ body{
 	margin: auto;
 	display: block;
 	}
-
 .main-body .floating{
 	padding: 96px 0px;	
 }
-
 /*
 .main-body .floating-box{
 	display: inline-block;
@@ -204,9 +229,12 @@ body{
     margin: 10px;
 	}
 */
-.main-body .floating-box img{
+.main-body .floating-box .floating-images{
 	width: 100%;
 	height: 200px;
+	background-repeat:no-repeat;
+	background-position: center;
+	background-size: cover;
 }
 .main-body .floating-box h4{
 	color:#3a3a3a;
@@ -271,6 +299,21 @@ ol, ul {
 .navbar { 
 	height: 60px;
 }
+#navbar .nav li{	
+	padding-left:20px !important;
+	}
+.carousel{
+	margin-top: 60px;
+}
+.inner-img{
+height: calc(100vh - 60px);
+}
+.glyphicon-chevron-right{
+	right: 12% !important;
+}
+.glyphicon-chevron-left{
+	left: 12% !important;
+}
 .navbar-header a img{
   display: inline;
 }
@@ -309,4 +352,26 @@ ol, ul {
 .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
     background-color: #fff !important;
 }
+}
+@media only screen and (max-width: 1200px) {
+	#navbar .nav li{	
+	padding-top:27px;
+	}
+}
+@media only screen and (max-width: 1035px){
+	
+}
+@media only screen and (max-width: 992px) {
+#navbar .nav li:first-child{	
+	padding-top:27px;
+}
+	#navbar .nav li:last-child{	
+	padding-top:10px;
+}
+	#navbar .nav li:last-child a{	
+	padding-top:15px;
+}
+	#navbar .nav li{	
+	padding-top:10px;
+	}
 }
